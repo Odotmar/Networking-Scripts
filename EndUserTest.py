@@ -9,7 +9,7 @@ path_for_output = "~/Desktop/Sohonet-Triage.txt"
 #Get customer public IP
 cust_pub_ip = subprocess.run(["curl ifconfig.me"])
 #Get OS Info
-cust_os = subprocess.run(["/ etc / os - release | grep PRETTY "])
+cust_os = subprocess.run(["/etc/os-release", "| grep PRETTY "])
 
 myoutput = open(path_for_output,'w+')
 
