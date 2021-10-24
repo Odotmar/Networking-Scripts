@@ -13,7 +13,7 @@ cust_os = subprocess.run(["/ etc / os - release | grep PRETTY "])
 
 myoutput = open(path_for_output,'w+')
 
-p = Popen([cust_os,cust_pub_ip], stdout=myoutput, stderr=subprocess.PIPE, universal_newlines=True)
+p = Popen(["cust_os","cust_pub_ip"], stdout=myoutput, stderr=subprocess.PIPE, universal_newlines=True)
 
 
 with open(path_for_output,"r") as f:
